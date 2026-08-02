@@ -1,9 +1,10 @@
-import streamlit as st
+import os
+
 import pandas as pd
+import streamlit as st
+from dotenv import load_dotenv
 from pandasai import SmartDataframe
 from pandasai.llm import OpenAI
-import os
-from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -49,13 +50,13 @@ if uploaded_file and api_key:
         with st.chat_message("user"):
             st.markdown(prompt)
             
-        with st.chat_message("assistant"):
+        with st.chat_message("assistant"):  # noqa: SIM117
             with st.spinner("Analyzing data..."):
                 try:
                     response = sdf.chat(prompt)
                     st.markdown(str(response))
                     st.session_state.messages.append({"role": "assistant", "content": str(response)})
-                except Exception as e:
-                    st.error(f"Error: {str(e)}")
+                except Exception as e:  # noqa: BLE001
+                    st.error(f"Error: {e!s}")
 elif uploaded_file and not api_key:
     st.info("Upload complete. Please enter your API key in the sidebar to chat.")
