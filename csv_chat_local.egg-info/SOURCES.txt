@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+csv_chat_local/app.py
+csv_chat_local/cli.py
+csv_chat_local.egg-info/PKG-INFO
+csv_chat_local.egg-info/SOURCES.txt
+csv_chat_local.egg-info/dependency_links.txt
+csv_chat_local.egg-info/entry_points.txt
+csv_chat_local.egg-info/requires.txt
+csv_chat_local.egg-info/top_level.txt
+tests/test_cli.py

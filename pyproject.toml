@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-chat-local"
+version = "1.0.0"
+description = "📊 Chat with your CSV files locally using Streamlit and OpenAI. 100% open source."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Varun Ruhella" }]
+keywords = ["csv", "chat", "ai", "pandas", "streamlit", "openai"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.30.0",
+    "pandas>=2.0.0",
+    "pandasai>=2.0.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+csv-chat = "csv_chat_local.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/varungor365/csv-chat-local"
+Repository = "https://github.com/varungor365/csv-chat-local"
