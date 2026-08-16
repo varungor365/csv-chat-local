@@ -52,3 +52,11 @@ See [CLAUDE.md](CLAUDE.md) for contribution guidelines.
 ## 📄 License
 
 MIT © Varun Ruhella. See [LICENSE](LICENSE) for details.
+
+## Who this is for
+
+CSV Chat Local lets you explore tabular data through a local Streamlit interface and an LLM workflow. It is useful for analysts, students, and developers who want to ask questions about CSV files without turning the repository into a hosted data service.
+
+## Why star this repository
+
+Star this project if local data analysis, CSV exploration, Streamlit, or privacy-conscious LLM workflows are useful to you.
